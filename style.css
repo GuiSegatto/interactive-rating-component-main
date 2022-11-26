@@ -20,6 +20,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+}
+
+main {
+    margin: auto 0 0;
 }
 
 .container {
@@ -27,15 +32,14 @@ body {
     background: radial-gradient(circle at 50% 0%, hsl(216, 19%, 19%) 0%, hsl(216, 19%, 13%) 50%);
     padding: 20px;
     border-radius: 15px;
-    
-    min-height: 377px;
 
+    min-height: 377px;
     max-width: 385px;
     max-height: 377px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 
 .starContainer {
@@ -66,12 +70,12 @@ p {
     line-height: 24px;
 }
 
-.giveScoreText{
+.giveScoreText {
     text-align: left;
     margin: 0 0 35px 0;
 }
 
-.giveScoreHeader{
+.giveScoreHeader {
     text-align: left;
     margin: 14px 0;
 }
@@ -105,10 +109,15 @@ input[type="radio"]+label {
     text-align: center;
     width: 2.69rem;
     height: 2.69rem;
-    transition: 0.4s;
+    transition: 0.6s;
 }
 
-input[type="radio"]:checked + label {
+input[type="radio"]:hover+label {
+    background-color: hsl(217, 12%, 63%);
+    color: hsl(0, 0%, 100%);
+}
+
+input[type="radio"]:checked+label {
     background-color: hsl(25, 97%, 53%);
     color: hsl(0, 0%, 100%);
 }
@@ -136,6 +145,7 @@ input[type="radio"]:checked + label {
     justify-content: center;
     width: 100%;
 }
+
 .thankYouImg {
     margin: 10px 0;
 }
@@ -144,7 +154,7 @@ input[type="radio"]:checked + label {
     background-color: hsl(213, 19%, 18%);
     border-radius: 50px;
     width: fit-content;
-    
+
     padding: 7px 15px;
     margin: 20px auto;
 }
@@ -153,7 +163,7 @@ input[type="radio"]:checked + label {
     color: hsl(25, 100%, 61%);
 }
 
-.resultHeader{
+.resultHeader {
     text-align: center;
     margin: 0 0 10px;
 }
@@ -161,4 +171,27 @@ input[type="radio"]:checked + label {
 .resultText {
     text-align: center;
     padding: 0 2px;
+}
+
+.scoreResult {
+    transition: 1.5s;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+footer {
+    margin: auto 0 0;
+}
+
+.attribution {
+    font-size: 14px;
+    text-align: center;
+    color: white;
+}
+
+
+.attribution a {
+    color: hsl(25, 100%, 61%);
 }

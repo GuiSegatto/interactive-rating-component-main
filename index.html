@@ -10,64 +10,70 @@
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Interactive rating component</title>
 
+  <script defer src="script.js"></script>
 </head>
 
 <body>
+  <main>
+    <div class="container">
 
-
-  <div class="container">
-
-    <!-- Rating state start -->
-    <div class="giveScore" hidden>
-      <div class="starContainer">
-        <img class="starIcon" src="/images/icon-star.svg" alt="Star Icon">
-      </div>
-
-      <h1 class="giveScoreHeader">How did we do?</h1>
-
-      <p class="giveScoreText">Please let us know how we did with your support request. All feedback is appreciated
-        to help us improve our offering!</p>
-
-      <form>
-        <div class="scoreContainer">
-          <input type="radio" id="score_1" name="score" value="1">
-          <label for="score_1">1</label>
-
-          <input type="radio" id="score_2" name="score" value="2">
-          <label for="score_2">2</label>
-
-          <input type="radio" id="score_3" name="score" value="3">
-          <label for="score_3">3</label>
-
-          <input type="radio" id="score_4" name="score" value="4">
-          <label for="score_4">4</label>
-
-          <input type="radio" id="score_5" name="score" value="5">
-          <label for="score_5">5</label>
+      <!-- Rating state start -->
+      <div class="giveScore">
+        <div class="starContainer">
+          <img class="starIcon" src="/images/icon-star.svg" alt="Star Icon">
         </div>
-        <input type="button" value="submit" class="submitButton" onclick="checkScore()">
-      </form>
-    </div>
-    <!-- Rating state end -->
 
-    <!-- Thank you state start -->
-    <div class="scoreResult" >
-      <div class="thankYouImgContainer">
-      <img class="thankYouImg" src="/images/illustration-thank-you.svg" alt="">
-    </div>
+        <h1 class="giveScoreHeader">How did we do?</h1>
 
-      <div class="rating">
-        <p class="ratingText">You selected X out of 5</p>
+        <p class="giveScoreText">Please let us know how we did with your support request. All feedback is appreciated
+          to help us improve our offering!</p>
+
+        <form onsubmit="submitScore(event)">
+          <div class="scoreContainer">
+            <input type="radio" id="score_1" name="score" value="1">
+            <label for="score_1">1</label>
+
+            <input type="radio" id="score_2" name="score" value="2">
+            <label for="score_2">2</label>
+
+            <input type="radio" id="score_3" name="score" value="3">
+            <label for="score_3">3</label>
+
+            <input type="radio" id="score_4" name="score" value="4">
+            <label for="score_4">4</label>
+
+            <input type="radio" id="score_5" name="score" value="5">
+            <label for="score_5">5</label>
+          </div>
+          <input type="submit" value="SUBMIT" class="submitButton" onclick="checkScore()">
+        </form>
       </div>
+      <!-- Rating state end -->
 
-      <h1 class="resultHeader">Thank You</h1>
-      <p class="resultText">We appreciate you taking the time to give a rating. If you ever need more support, don’t
-        hesitate to get in touch!</p>
+
+      <!-- Thank you state start -->
+      <div class="scoreResult hidden">
+        <div class="thankYouImgContainer">
+          <img class="thankYouImg" src="/images/illustration-thank-you.svg" alt="">
+        </div>
+
+        <div class="rating">
+          <p class="ratingText"></p>
+        </div>
+
+        <h1 class="resultHeader">Thank You!</h1>
+        <p class="resultText">We appreciate you taking the time to give a rating. If you ever need more support, don’t
+          hesitate to get in touch!</p>
+      </div>
+      <!-- Thank you state end -->
     </div>
-    <!-- Thank you state end -->
-
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/GuiSegatto" target="_blank">Guilherme</a>.
+  </footer>
   </div>
-  <script src="script.js"></script>
 </body>
 
 </html>
