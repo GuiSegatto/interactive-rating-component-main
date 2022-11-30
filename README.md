@@ -47,7 +47,7 @@ ______
 
 ### Links
 
-- Solution URL: [https://www.frontendmentor.io/solutions/faq-accordion-ljjux83N3K](https://www.frontendmentor.io/solutions/faq-accordion-ljjux83N3K)
+- Solution URL: [https://guisegatto.github.io/interactive-rating-component-main/)
 
 - Live Site URL: [https://guisegatto.github.io/FAQ-Accordion/](https://guisegatto.github.io/interactive-rating-component-main/)
 
